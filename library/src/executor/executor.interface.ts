@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-import { CommandHookFactory, HuskyRunnerFactory } from '@husky-starter/core';
-
-const huskyHook = HuskyRunnerFactory.createShellJsRunner();
-huskyHook
-  .addPreInstallCommand('rm -rf .husky')
-  .installHusky('cd .. && husky install sample/.husky')
-  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'echo hello'))
-  .runAllCommands();
+export interface ExecutorInterface {
+  /**
+   * Execute the provided command
+   * @param command command
+   */
+  exec(command: string): void;
+}

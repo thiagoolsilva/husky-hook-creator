@@ -14,6 +14,16 @@
  * limitations under the License.
  */
 
-export * from "./model/husky-hook-input";
-export * from "./command/husky";
-export * from "./command/husky-command.interface";
+// commands
+export * from "./command-hook/model/command-hook-output";
+export * from "./command-hook/command-hook.interface";
+export * from "./command-hook/command-hook-factory";
+
+// executor 
+export * from "./executor/executor.interface";
+export * from "./executor/shelljs-executor";
+
+// runner
+export * from "./runner/husky-runner";
+export * from "./runner/husky-runner-factory";
+export * from "./runner/husky-runner.interface";

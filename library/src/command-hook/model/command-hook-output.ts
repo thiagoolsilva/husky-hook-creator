@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-export class HuskyHookOutput {
+export class CommandHookOutput {
   public constructor(public gitHook: string, public command: string) {}
 }

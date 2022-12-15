@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-import { HuskyHookOutput } from "../model/husky-hook-input";
-
-export interface HuskyCommandInterface {
-  configure(): HuskyHookOutput;
+export class Logger {
+  /**
+   * Log message to console
+   * @param message message
+   */
+  public static log(message: string): void {
+    console.log(`[@husky/core]: ${message}`);
+  }
 }
