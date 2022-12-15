@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { CommandHookInterface } from "../command-hook/command-hook.interface";
+import { CommandHookInterface } from '../command-hook/command-hook.interface';
 
 export interface HuskyRunnerInterface {
   installHusky(huskyInstallCommand?: string): HuskyRunnerInterface;

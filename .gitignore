@@ -3,7 +3,7 @@
 yalc.lock
 
 # husky - since this project does not require husky hook on github the files will not be pushed to it
-.husky
+sample/.husky
 
 # dist
 dist-*

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { CommandHookOutput } from "./model/command-hook-output";
+import { CommandHookOutput } from './model/command-hook-output';
 
 export interface CommandHookInterface {
   /**

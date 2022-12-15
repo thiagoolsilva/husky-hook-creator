@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022  Thiago Lopes da Silva
+ * Copyright (c) 2021  Thiago Lopes da Silva
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,26 @@
  * limitations under the License.
  */
 
-import { exec as shelljsExec } from 'shelljs';
-import { ExecutorInterface } from './executor.interface';
-
-/**
- * Executor all provided commands using shelljs library
- */
-export class ShellJsExecutor implements ExecutorInterface {
-  /**
-   * Execute the command
-   * @param command command
-   */
-  public exec(command: string): void {
-    shelljsExec(command);
-  }
-}
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'improv',
+        'build',
+        'chore',
+        'ci',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test',
+      ],
+    ],
+  },
+};

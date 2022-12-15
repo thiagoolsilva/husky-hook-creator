@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-import { CommandHookInterface } from "../command-hook/command-hook.interface";
-import { ExecutorInterface } from "../executor/executor.interface";
-import { Logger } from "../logger/Logger";
-import { HuskyRunnerInterface } from "./husky-runner.interface";
+import { CommandHookInterface } from '../command-hook/command-hook.interface';
+import { ExecutorInterface } from '../executor/executor.interface';
+import { Logger } from '../logger/Logger';
+import { HuskyRunnerInterface } from './husky-runner.interface';
 
 export class HuskyRunner implements HuskyRunnerInterface {
   private installCommand?: string;
+
   private readonly preInstallCommands: string[] = [];
+
   private readonly commands: CommandHookInterface[] = [];
 
   public constructor(private executor: ExecutorInterface) {}
@@ -46,7 +48,7 @@ export class HuskyRunner implements HuskyRunnerInterface {
     if (huskyInstallCommand) {
       this.installCommand = huskyInstallCommand;
     } else {
-      this.installCommand = "husky install";
+      this.installCommand = 'husky install';
     }
 
     return this;
@@ -67,7 +69,7 @@ export class HuskyRunner implements HuskyRunnerInterface {
    * Run all pending commands
    */
   public runAllCommands(): void {
-    Logger.log("starting hook runner execution.");
+    Logger.log('starting hook runner execution.');
 
     // execute pending scripts
     this.preInstallCommands.forEach((command: string) => {
@@ -84,9 +86,9 @@ export class HuskyRunner implements HuskyRunnerInterface {
         this.executor.exec(`husky add .husky/${gitHook} '${command}'`);
       });
     } else {
-      Logger.log("There are no command available. Please provide one.");
+      Logger.log('There are no command available. Please provide one.');
     }
 
-    Logger.log("finished hook runner execution.");
+    Logger.log('finished hook runner execution.');
   }
 }

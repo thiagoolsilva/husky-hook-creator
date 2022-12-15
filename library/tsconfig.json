@@ -1,9 +1,9 @@
 {
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDirs": ["src", "script"],
     "outDir": "dist"
   },
-  "exclude": ["test/"],
-  "include": ["src"]
+  "exclude": ["test/", "node_modules"],
+  "include": ["src", "script"]
 }

@@ -14,13 +14,20 @@
  * limitations under the License.
  */
 
-import { CommandHookFactory, HuskyRunnerFactory } from '@husky-hook-starter/core';
+import { CommandHookFactory, HuskyRunnerFactory } from '../../src/index';
 
-// For more details about git hooks go to https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 const huskyHook = HuskyRunnerFactory.createShellJsRunner();
 huskyHook
   .addPreInstallCommand('rm -rf .husky')
-  .installHusky('cd .. && husky install sample/.husky')
-  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'echo your shell script goes here.'))
-  .addCommand(CommandHookFactory.createHookCommand('pre-push', 'echo your shell script goes here.'))
+  .installHusky('cd .. && husky install library/.husky')
+  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'cd library'))
+  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn lint'))
+  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn format '))
+  .addCommand(CommandHookFactory.createHookCommand('pre-push', 'cd library'))
+  .addCommand(
+    CommandHookFactory.createHookCommand(
+      'pre-push',
+      './node_modules/.bin/pretty-quick --staged --bail',
+    ),
+  )
   .runAllCommands();

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+cd library
+./node_modules/.bin/pretty-quick --staged --bail

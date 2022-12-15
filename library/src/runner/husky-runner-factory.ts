@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { ExecutorInterface } from "../executor/executor.interface";
-import { ShellJsExecutor } from "../executor/shelljs-executor";
-import { HuskyRunner } from "./husky-runner";
+import { ExecutorInterface } from '../executor/executor.interface';
+import { ShellJsExecutor } from '../executor/shelljs-executor';
+import { HuskyRunner } from './husky-runner';
 
 export class HuskyRunnerFactory {
   /**

@@ -4,14 +4,14 @@
   "main": "./dist-cjs/index.js",
   "license": "Apache License 2.0",
   "dependencies": {
-    "@husky-starter/core": "file:.yalc/@husky-starter/core"
+    "@husky-hook-starter/core": "file:.yalc/@husky-hook-starter/core"
   },
   "scripts": {
     "build:types": "tsc -p tsconfig.types.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:es": "tsc -p tsconfig.es.json",
     "build": "concurrently  'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
-    "clean": "rimraf ./dist-* && rimraf *.tsbuildinfo",
+    "clean": "rimraf ./dist-* *.tsbuildinfo .husky",
     "clean:all": "rimraf ./dist-* && rimraf *.tsbuildinfo && rimraf node_modules",
     "create-hooks": "ts-node script/src/husky-runner.ts"
   },

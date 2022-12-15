@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { CommandHookInterface } from "./command-hook.interface";
-import { CommandHookOutput } from "./model/command-hook-output";
+import { CommandHookInterface } from './command-hook.interface';
+import { CommandHookOutput } from './model/command-hook-output';
 
 /**
  * Builder used to create command hook
@@ -27,10 +27,7 @@ export class CommandHookFactory {
    * @param command command used on hook
    * @returns instance of Command Hook Output
    */
-  public static createHookCommand(
-    gitHook: string,
-    command: string
-  ): CommandHookInterface {
+  public static createHookCommand(gitHook: string, command: string): CommandHookInterface {
     return {
       configure(): CommandHookOutput {
         return {
