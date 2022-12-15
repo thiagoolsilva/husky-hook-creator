@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node14/tsconfig.json",
+
+  "compilerOptions": {
+    "rootDirs": ["src", "script"],
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "esModuleInterop": true
+  },
+  "exclude": ["test/", "node_modules"],
+  "include": ["src", "script"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+  },
+}

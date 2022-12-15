@@ -1,0 +1,39 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "main": "./dist-cjs/index.js",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "@husky-starter/core": "file:.yalc/@husky-starter/core"
+  },
+  "scripts": {
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:es": "tsc -p tsconfig.es.json",
+    "build": "concurrently  'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
+    "clean": "rimraf ./dist-* && rimraf *.tsbuildinfo",
+    "clean:all": "rimraf ./dist-* && rimraf *.tsbuildinfo && rimraf node_modules",
+    "create-hooks": "ts-node script/src/husky-runner.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagoolsilva/husky-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thiagoolsilva/husky-starter/issues"
+  },
+  "homepage": "https://github.com/thiagoolsilva/husky-starter#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "1.0.3",
+    "@types/node": "18.11.15",
+    "concurrently": "7.2.0",
+    "husky": "7.0.2",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "ts-node": "10.3.0",
+    "typescript": "4.4.3"
+  }
+}
