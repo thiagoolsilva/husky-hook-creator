@@ -26,6 +26,13 @@ export class ShellJsExecutor implements ExecutorInterface {
    * @param command command
    */
   public exec(command: string): void {
-    shelljsExec(command);
+    const exitCodeWithSuccess = 0;
+    const execResult = shelljsExec(command);
+
+    if (execResult.code !== exitCodeWithSuccess) {
+      throw new Error(
+        `Failed to execute the command [${command}]. The error code is [${execResult.code}] and error message [${execResult.stderr}]`,
+      );
+    }
   }
 }

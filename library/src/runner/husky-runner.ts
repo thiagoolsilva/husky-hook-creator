@@ -16,7 +16,7 @@
 
 import { CommandHookInterface } from '../command-hook/command-hook.interface';
 import { ExecutorInterface } from '../executor/executor.interface';
-import { Logger } from '../logger/Logger';
+import { Logger } from '../logger/logger';
 import { HuskyRunnerInterface } from './husky-runner.interface';
 
 export class HuskyRunner implements HuskyRunnerInterface {

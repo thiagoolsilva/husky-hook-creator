@@ -20,6 +20,7 @@ export class Logger {
    * @param message message
    */
   public static log(message: string): void {
+    // eslint-disable-next-line no-console
     console.log(`[@husky/core]: ${message}`);
   }
 }

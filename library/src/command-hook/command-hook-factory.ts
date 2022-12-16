@@ -28,6 +28,10 @@ export class CommandHookFactory {
    * @returns instance of Command Hook Output
    */
   public static createHookCommand(gitHook: string, command: string): CommandHookInterface {
+    if (gitHook === '' || command === '') {
+      throw new Error('The parameters [githook] or [command] are empty.');
+    }
+
     return {
       configure(): CommandHookOutput {
         return {
