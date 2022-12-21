@@ -8,7 +8,7 @@ export default {
 
   rootDir: '../../',
 
-  coveragePathIgnorePatterns: ['create-hooks.ts', 'dist-*'],
+  coveragePathIgnorePatterns: ['create-hooks.ts', 'dist-*', 'src/command-hook'],
 
   collectCoverageFrom: ['!**/node_modules/**', 'src/**/*.ts'],
 
