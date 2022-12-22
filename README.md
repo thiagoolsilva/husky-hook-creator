@@ -4,7 +4,7 @@
 ![Prerequisite](https://img.shields.io/badge/node-%3E%3D14.0.0-blue.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/thiagoolsilva/husky-starter#readme)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/thiagoolsilva/husky-starter/graphs/commit-activity)
-[![License: Apache License 2.0](https://img.shields.io/github/license/thiagoolsilva/@husky-hook-starter/core)](https://github.com/thiagoolsilva/husky-starter/blob/master/LICENSE)
+[![License: Apache License 2.0](https://img.shields.io/github/license/thiagoolsilva/@husky-hook-starter/core)](https://github.com/thiagoolsilva/husky-starter/blob/main/LICENSE)
 
 ### 🏠 [Homepage](https://github.com/thiagoolsilva/husky-starter#readme)
 
@@ -59,9 +59,14 @@ await huskyHook
   .runAllCommands();
 ```
 
-4. Run the code `ts-node script/src/create-hooks.ts` to install all git hooks
+### (Optional) ts-node
 
-Ps: This code assume your root folder has a .git folder. On the other hands you can check the [file](library/script/src/create-hooks.ts).
+The library ts-node gonna help us to run the typescript code executing and installing all git hooks from the library.
+
+1. Install the ts-node executing the command `yarn add -D ts-node@10.3.0`
+1. Execute the created script executing the command `ts-node yourPath/your-runner.ts`
+
+For more details, please check the script named **create-hooks-with-custom-executor** at [package.json](sample/package.json).
 
 ## Features
 
@@ -274,11 +279,15 @@ cd library && yarn test:unit-testing:coverage
 - Github: [@thiagoolsilva](https://github.com/thiagoolsilva)
 - LinkedIn: [@thiago-lopes-silva-2b943a25](https://linkedin.com/in/thiago-lopes-silva-2b943a25)
 
-## 🤝 Contributing
+## Code of Conduct
+
+Feel free to check the [code of conduct guide](https://github.com/thiagoolsilva/husky-starter/blob/main/CODE_OF_CONDUCT.md).
+
+## Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/thiagoolsilva/husky-starter/issues). You can also take a look at the [contributing guide](https://github.com/thiagoolsilva/husky-starter/blob/master/CONTRIBUTING.md).
+Feel free to check [issues page](https://github.com/thiagoolsilva/husky-starter/issues). You can also take a look at the [contributing guide](https://github.com/thiagoolsilva/husky-starter/blob/main/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -288,7 +297,7 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2022 [thiago lopes da silva <thiagoolsilva@gmail.com>, kaio monteiro calás da costa <kaiomonteiro151@gmail.com>](https://github.com/thiagoolsilva).
 
-This project is [Apache License 2.0](https://github.com/thiagoolsilva/husky-starter/blob/master/LICENSE) licensed.
+This project is [Apache License 2.0](https://github.com/thiagoolsilva/husky-starter/blob/main/LICENSE) licensed.
 
 ---
 
