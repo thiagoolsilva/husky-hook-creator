@@ -14,10 +14,14 @@
  * limitations under the License.
  */
 
-export interface ExecutorInterface {
-  /**
-   * Execute the provided command
-   * @param command command
-   */
-  exec(command: string): Promise<void>;
+import { ExecutorInterface } from '@husky-hook-starter/core';
+import execa from 'execa';
+
+export class CustomExecutor implements ExecutorInterface {
+  public async exec(command: string): Promise<void> {
+    const resultCommand = await execa(command, undefined, {
+      shell: true,
+    });
+    console.log(resultCommand.stdout);
+  }
 }

@@ -68,22 +68,22 @@ export class HuskyRunner implements HuskyRunnerInterface {
   /**
    * Run all pending commands
    */
-  public runAllCommands(): void {
+  public async runAllCommands(): Promise<void> {
     Logger.log('starting hook runner execution.');
 
     // execute pending scripts
-    this.preInstallCommands.forEach((command: string) => {
-      this.executor.exec(`${command}`);
+    this.preInstallCommands.forEach(async (command: string) => {
+      await this.executor.exec(`${command}`);
     });
 
     // install pending husky install command
-    if (this.installCommand) this.executor.exec(this.installCommand);
+    if (this.installCommand) await this.executor.exec(this.installCommand);
 
     if (this.commands.length) {
       // execute pending install husky script
-      this.commands.forEach((item: CommandHookInterface) => {
+      this.commands.forEach(async (item: CommandHookInterface) => {
         const { gitHook, command } = item.configure();
-        this.executor.exec(`husky add .husky/${gitHook} '${command}'`);
+        await this.executor.exec(`husky add .husky/${gitHook} '${command}'`);
       });
     } else {
       Logger.log('There are no command available. Please provide one.');

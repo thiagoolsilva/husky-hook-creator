@@ -16,22 +16,27 @@
 
 import { CommandHookFactory, HuskyRunnerFactory } from '../../src/index';
 
-const huskyHook = HuskyRunnerFactory.createShellJsRunner();
-huskyHook
-  .addPreInstallCommand('rm -rf .husky')
-  .installHusky('cd .. && husky install library/.husky')
-  .addCommand(CommandHookFactory.createHookCommand('commit-msg', 'cd library'))
-  .addCommand(
-    CommandHookFactory.createHookCommand('commit-msg', './node_modules/.bin/commitlint --edit $1'),
-  )
-  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'cd library'))
-  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn lint'))
-  .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn format '))
-  .addCommand(CommandHookFactory.createHookCommand('pre-push', 'cd library'))
-  .addCommand(
-    CommandHookFactory.createHookCommand(
-      'pre-push',
-      './node_modules/.bin/pretty-quick --staged --bail',
-    ),
-  )
-  .runAllCommands();
+(async () => {
+  const huskyHook = HuskyRunnerFactory.createShellJsRunner();
+  await huskyHook
+    .addPreInstallCommand('rm -rf .husky')
+    .installHusky('cd .. && husky install library/.husky')
+    .addCommand(CommandHookFactory.createHookCommand('commit-msg', 'cd library'))
+    .addCommand(
+      CommandHookFactory.createHookCommand(
+        'commit-msg',
+        './node_modules/.bin/commitlint --edit $1',
+      ),
+    )
+    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'cd library'))
+    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn lint'))
+    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn format '))
+    .addCommand(CommandHookFactory.createHookCommand('pre-push', 'cd library'))
+    .addCommand(
+      CommandHookFactory.createHookCommand(
+        'pre-push',
+        './node_modules/.bin/pretty-quick --staged --bail',
+      ),
+    )
+    .runAllCommands();
+})();

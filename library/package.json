@@ -1,10 +1,10 @@
 {
   "name": "@husky-hook-starter/core",
   "version": "1.0.0",
-  "author": "thiago lopes da silva <thiagoolsilva@gmail.com>, kaio monteiro calás da costa <kaiomonteiro151@gmail.com>", 
-  "main": "./dist-cjs/index.js",
-  "types": "./dist-types/index.d.ts",
-  "module": "./dist-es/index.js",
+  "author": "thiago lopes da silva <thiagoolsilva@gmail.com>, kaio monteiro calás da costa <kaiomonteiro151@gmail.com>",
+  "main": "./dist-cjs/src/index.js",
+  "types": "./dist-types/src/index.d.ts",
+  "module": "./dist-es/src/index.js",
   "license": "Apache License 2.0",
   "repository": {
     "type": "git",

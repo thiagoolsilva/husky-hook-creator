@@ -9,9 +9,5 @@
     "esModuleInterop": true
   },
   "exclude": ["test/", "node_modules"],
-  "include": ["src", "script"],
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-  },
+  "include": ["src", "script"]
 }

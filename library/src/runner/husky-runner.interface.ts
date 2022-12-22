@@ -20,5 +20,5 @@ export interface HuskyRunnerInterface {
   installHusky(huskyInstallCommand?: string): HuskyRunnerInterface;
   addPreInstallCommand(scriptCommand: string): HuskyRunnerInterface;
   addCommand(command: CommandHookInterface): HuskyRunnerInterface;
-  runAllCommands(): void;
+  runAllCommands(): Promise<void>;
 }

@@ -25,7 +25,7 @@ export class ShellJsExecutor implements ExecutorInterface {
    * Execute the command
    * @param command command
    */
-  public exec(command: string): void {
+  public exec(command: string): Promise<void> {
     const exitCodeWithSuccess = 0;
     const execResult = shelljsExec(command);
 
@@ -34,5 +34,7 @@ export class ShellJsExecutor implements ExecutorInterface {
         `Failed to execute the command [${command}]. The error code is [${execResult.code}] and error message [${execResult.stderr}]`,
       );
     }
+
+    return Promise.resolve();
   }
 }
