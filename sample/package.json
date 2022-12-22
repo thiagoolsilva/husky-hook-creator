@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./dist-cjs/index.js",
   "license": "Apache License 2.0",
+  "private": true,
   "dependencies": {
     "@husky-hook-starter/core": "file:.yalc/@husky-hook-starter/core",
     "execa": "5.1.1"
