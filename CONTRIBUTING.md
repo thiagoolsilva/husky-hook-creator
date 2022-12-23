@@ -29,7 +29,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[husky-hook-creator Code of Conduct](thiagoolsilva@gmail.comblob/master/CODE_OF_CONDUCT.md).
+[husky-hook-creator Code of Conduct](https://github.com/thiagoolsilva/husky-hook-creator/blob/main/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <thiagoolsilva@gmail.com>.
 

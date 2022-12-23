@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { CommandHookFactory, HuskyRunnerFactory } from '@husky-hook-starter/core';
+import { CommandHookFactory, HuskyRunnerFactory } from '@husky-hook-creator/core';
 
 // For more details about git hooks go to https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 const huskyHook = HuskyRunnerFactory.createShellJsRunner();

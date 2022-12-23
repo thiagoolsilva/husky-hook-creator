@@ -14,8 +14,8 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@husky-hook-starter/core@file:.yalc/@husky-hook-starter/core":
-  version "1.0.0"
+"@husky-hook-creator/core@file:.yalc/@husky-hook-creator/core":
+  version "1.0.4"
   dependencies:
     shelljs "0.8.5"
 

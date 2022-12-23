@@ -1,6 +1,6 @@
 {
-  "name": "@husky-hook-starter/core",
-  "version": "1.0.0",
+  "name": "@husky-hook-creator/core",
+  "version": "1.0.4",
   "author": "thiago lopes da silva <thiagoolsilva@gmail.com>, kaio monteiro calás da costa <kaiomonteiro151@gmail.com>",
   "main": "./dist-cjs/src/index.js",
   "types": "./dist-types/src/index.d.ts",
@@ -33,7 +33,8 @@
     "shelljs": "0.8.5"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0",
+    "husky": ">=7.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "16.1.0",

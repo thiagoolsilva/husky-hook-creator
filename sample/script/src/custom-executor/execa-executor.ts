@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { ExecutorInterface } from '@husky-hook-starter/core';
+import { ExecutorInterface } from '@husky-hook-creator/core';
 import execa from 'execa';
 
 export class CustomExecutor implements ExecutorInterface {

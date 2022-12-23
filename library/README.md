@@ -73,9 +73,7 @@ For more details, please check the script named **create-hooks-with-custom-execu
 
 ## Features
 
-The husky library uses the concept of pipeline to run all commands in order as will be show below.
-
-![](misc/husky-hook-diagram.png)
+The husky library uses the concept of pipeline to run all commands in sequence.
 
 ## Commands
 

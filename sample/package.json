@@ -5,7 +5,7 @@
   "license": "Apache License 2.0",
   "private": true,
   "dependencies": {
-    "@husky-hook-starter/core": "file:.yalc/@husky-hook-starter/core",
+    "@husky-hook-creator/core": "file:.yalc/@husky-hook-creator/core",
     "execa": "5.1.1"
   },
   "scripts": {
