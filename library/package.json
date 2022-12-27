@@ -15,6 +15,14 @@
     "url": "https://github.com/thiagoolsilva/husky-starter/issues"
   },
   "homepage": "https://github.com/thiagoolsilva/husky-starter#readme",
+  "keywords": [
+    "git",
+    "hooks",
+    "husky",
+    "husky-config",
+    "husky-hooks",
+    "pre-commit"
+  ],
   "scripts": {
     "build:types": "tsc -p tsconfig.types.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
