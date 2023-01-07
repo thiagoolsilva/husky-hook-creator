@@ -1,6 +1,6 @@
 {
   "name": "@husky-hook-creator/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "thiago lopes da silva <thiagoolsilva@gmail.com>, kaio monteiro calás da costa <kaiomonteiro151@gmail.com>",
   "main": "./dist-cjs/src/index.js",
   "types": "./dist-types/src/index.d.ts",
@@ -15,6 +15,13 @@
     "url": "https://github.com/thiagoolsilva/husky-starter/issues"
   },
   "homepage": "https://github.com/thiagoolsilva/husky-starter#readme",
+  "keywords": [
+    "husky",
+    "init",
+    "git",
+    "hooks",
+    "pre-commit"
+  ],
   "scripts": {
     "build:types": "tsc -p tsconfig.types.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
