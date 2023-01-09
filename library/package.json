@@ -27,14 +27,15 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:es": "tsc -p tsconfig.es.json",
     "build": "concurrently  'yarn:build:cjs' 'yarn:build:es' 'yarn:build:types'",
-    "lint": "eslint --quiet --ext .ts .",
-    "lint:fix": "eslint --fix --ext .ts .",
-    "format": "yarn prettier --write .",
     "clean": "rimraf ./dist-* && rimraf *.tsbuildinfo",
     "clean:all": "rimraf ./dist-* && rimraf *.tsbuildinfo && rimraf node_modules",
     "test:unit-testing": "jest --runInBand --detectOpenHandles --testRegex='.spec.ts' --testPathPattern=tests/unit-tests -c tests/unit-tests/jest.config.ts",
     "test:unit-testing:coverage": "jest --coverage --testRegex='.spec.ts' --testPathPattern=tests/unit-tests -c tests/unit-tests/jest.config.ts",
-    "create-hooks": "ts-node script/src/create-hooks.ts"
+    "create-hooks": "ts-node script/src/create-hooks.ts",
+    "static-analysis:lint": "eslint --quiet --ext .ts .",
+    "static-analysis:lint:fix": "eslint --fix --ext .ts .",
+    "static-analysis:format": "yarn prettier --write .",
+    "static-analysis:branch-name": "ts-node script/src/check-branch-name.ts"
   },
   "dependencies": {
     "shelljs": "0.8.5"

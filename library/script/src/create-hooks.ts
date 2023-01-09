@@ -29,9 +29,12 @@ import { CommandHookFactory, HuskyRunnerFactory } from '../../src/index';
       ),
     )
     .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'cd library'))
-    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn lint'))
-    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn format '))
+    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn static-analysis:lint'))
+    .addCommand(CommandHookFactory.createHookCommand('pre-commit', 'yarn static-analysis:format '))
     .addCommand(CommandHookFactory.createHookCommand('pre-push', 'cd library'))
+    .addCommand(
+      CommandHookFactory.createHookCommand('pre-push', 'yarn static-analysis:branch-name'),
+    )
     .addCommand(
       CommandHookFactory.createHookCommand(
         'pre-push',
