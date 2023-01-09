@@ -2,4 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 cd library
+yarn static-analysis:branch-name
 ./node_modules/.bin/pretty-quick --staged --bail

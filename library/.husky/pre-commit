@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 cd library
-yarn lint
-yarn format 
+yarn static-analysis:lint
+yarn static-analysis:format 
