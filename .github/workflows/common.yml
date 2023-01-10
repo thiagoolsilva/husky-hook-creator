@@ -1,0 +1,31 @@
+name: Common
+on:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  eslint:
+    name: Run eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - run: |
+          cd library/
+          yarn install --frozen-lockfile
+          yarn static-analysis:lint
+  build:
+    name: Build code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - run: |
+          cd library/
+          yarn install --frozen-lockfile
+          yarn build
