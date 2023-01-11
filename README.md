@@ -2,11 +2,10 @@
 
 ### The library gonna help you to configure all your husky hooks
 
-![Version](https://img.shields.io/badge/version-1.0.4-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000)
 ![Prerequisite](https://img.shields.io/badge/node-%3E%3D14.0.0-blue.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/thiagoolsilva/husky-hook-creator#readme)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/thiagoolsilva/husky-hook-creator/graphs/commit-activity)
-[![License: Apache License 2.0](https://img.shields.io/github/license/thiagoolsilva/@husky-hook-creator/core)](https://github.com/thiagoolsilva/husky-hook-creator/blob/main/LICENSE)
 
 ### 🏠 [Homepage](https://github.com/thiagoolsilva/husky-hook-creator#readme)
 
